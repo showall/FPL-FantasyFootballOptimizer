@@ -18,8 +18,8 @@ from helper import calculate_score
 from dash import dash_table
 import os
 
-app = dash.Dash(__name__, requests_pathname_prefix='/dashboard/',  external_stylesheets=[dbc.themes.BOOTSTRAP]) 
-                #, routes_pathname_prefix='/dashboard/
+app = dash.Dash(__name__, requests_pathname_prefix='/dashboard/',  external_stylesheets=[dbc.themes.BOOTSTRAP], routes_pathname_prefix='/dashboard/'
+                )
 dashboard_endpoint = "dashboard"
 
 basepic_top_y = 25
@@ -36,7 +36,7 @@ p_list = []
 past_selection_df = pd.DataFrame({})
 for p in list(reversed(range(0, max_week))):
     try :
-        df_temp = pd.read_csv("selection-week{p}.csv", encoding='latin1')
+        df_temp = pd.read_csv(f"selection-week{p}.csv", encoding='latin1')
         past_selection_df = pd.concat([past_selection_df, df_temp])
         p_list.append(p)
     except :
@@ -623,13 +623,14 @@ def update_image(n_clicks, gameweek):
     week_id = int(gameweek.split(" ")[-1])
 #need a dataframe 
     global past_selection_df
-    try : 
+    if not(past_selection_df.empty):
         df_tab_1  = past_selection_df
         df_tab_1 =  df_tab_1.rename(columns={"id" : "identifier","position":"player_position","mins_played":"player_minutes_played","points":"player_total_point_obtained",  "cost":"player_costs"
                      })
-    except:
-       df_tab_1 = pd.read_csv("data.csv")
+    else :
+        df_tab_1 = pd.read_csv("data.csv")
     
+    print(df_tab_1)
     df_tab_2 = pd.read_csv("df_tab_2.csv")
     df_tab_3 = pd.read_csv("df_tab_3.csv")
     basepic = html.Img(src= "assets/field.jpg", style={'height': '83%', 'width': '80%','position': 'absolute','top': f'{basepic_top_y}%', 'left': '5%'})     
