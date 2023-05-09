@@ -877,8 +877,7 @@ def save_data(data, selected, n_clicks,gw, selection):
             return  0, "Maximum squad size exceeded.",selection, [{"label": f"Gameweek {i}", "value": i} for i in  selection  ]      
         if len(df_selection) < 15 :
             return  0, "You havent completed 15 players.",selection , [{"label": f"Gameweek {i}", "value": i} for i in  selection  ] 
-        with open(f"selection-week{week_id}.csv") as f :
-            df_selection.to_csv(f , index = False)
+        df_selection.to_csv(f"selection-week{week_id}.csv" , index = False)
         with open("text.txt", "r") as b:
             b.write(gw)
         return 0, f"Selection for Gameweek {week_id } saved. Please proceed to next week.", selection, [{"label": f"Gameweek {i}", "value": i} for i in  selection  ]
