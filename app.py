@@ -40,12 +40,12 @@ dash_app = appco
 #
 dashboard_endpoint = "dashboard"
 # Mount the Dash app as a sub-application in the FastAPI server
-app.mount("/dashboard", WSGIMiddleware(dash_app.server))
+# app.mount("/dashboard", WSGIMiddleware(dash_app.server))
 
 
 # Define the API endpoint to serve data to the Dash app
 @app.get("/")
-def get_data():
+def index():
     # Replace this with your own data retrieval code
     return "Hello"
 
