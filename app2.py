@@ -624,10 +624,12 @@ def update_image(n_clicks, gameweek):
     week_id = int(gameweek.split(" ")[-1])
 #need a dataframe 
     global past_selection_df
-    
-    df_tab_1  = past_selection_df
-    #except:
-     #   df_tab_1 = pd.read_csv("data.csv")
+    try : 
+        df_tab_1  = past_selection_df
+        df_tab_1 =  df_tab_1.rename(columns={"id" : "identifier","position":"player_position","mins_played":"player_minutes_played","points":"player_total_point_obtained",  "cost":"player_costs"
+                     })
+    except:
+       df_tab_1 = pd.read_csv("data.csv")
     
     df_tab_2 = pd.read_csv("df_tab_2.csv")
     df_tab_3 = pd.read_csv("df_tab_3.csv")
