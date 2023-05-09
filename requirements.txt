@@ -12,7 +12,7 @@ dash-mantine-components==0.12.1
 dash-table==5.0.0
 fastapi==0.95.1
 Flask==2.2.5
-gurobipy==10.0.1
+gurobipy==9.1.2
 h11==0.14.0
 idna==3.4
 importlib-metadata==6.6.0
