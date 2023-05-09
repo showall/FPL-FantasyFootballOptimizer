@@ -44,13 +44,10 @@ app.mount("/dashboard", WSGIMiddleware(dash_app.server))
 
 
 # Define the API endpoint to serve data to the Dash app
-@app.get("/)
+@app.get("/")
 def get_data():
     # Replace this with your own data retrieval code
     return "Hello"
-
-
-
 
 # Define the API endpoint to serve data to the Dash app
 @app.get("/data")
