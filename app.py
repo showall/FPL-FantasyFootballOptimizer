@@ -42,6 +42,16 @@ dashboard_endpoint = "dashboard"
 # Mount the Dash app as a sub-application in the FastAPI server
 app.mount("/dashboard", WSGIMiddleware(dash_app.server))
 
+
+# Define the API endpoint to serve data to the Dash app
+@app.get("/)
+def get_data():
+    # Replace this with your own data retrieval code
+    return "Hello"
+
+
+
+
 # Define the API endpoint to serve data to the Dash app
 @app.get("/data")
 def get_data():
@@ -127,4 +137,4 @@ def loading_data(id : int):
 
 # Start the FastAPI server
 if __name__ == "__main__":
-    uvicorn.run(app, port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
