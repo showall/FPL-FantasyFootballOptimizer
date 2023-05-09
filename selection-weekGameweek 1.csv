@@ -1,0 +1,16 @@
+,id,player_name,team,position,mins_played,points,round,cost,second_name,first_name,photo,holding_period
+0,White-101,White,Arsenal,Defender,90,5,1,4.5,White,Benjamin,198869.jpg,1
+1,Gabriel-161,Gabriel,Arsenal,Defender,90,7,1,5.0,dos Santos Magalhães,Gabriel,226597.jpg,4
+8,Amartey-25710,Amartey,Leicester,Defender,90,1,1,4.5,Amartey,Daniel,155569.jpg,1
+23,Diego Carlos-502,Diego Carlos,Aston Villa,Defender,90,1,1,5.0,Santos Silva,Diego Carlos,165659.jpg,2
+25,Maguire-33014,Maguire,Man Utd,Defender,90,0,1,5.0,Maguire,Harry,95658.jpg,2
+64,Mykolenko-1948,Mykolenko,Everton,Defender,90,1,1,4.5,Mykolenko,Vitalii,224967.jpg,3
+130,Mbeumo-954,Mbeumo,Brentford,Forward,90,2,1,6.0,Mbeumo,Bryan,446008.jpg,4
+131,Kane-42718,Kane,Spurs,Forward,90,2,1,11.5,Kane,Harry,78830.jpg,2
+156,Saint-Maximin-36815,Saint-Maximin,Newcastle,Midfielder,89,3,1,6.5,Saint-Maximin,Allan,170137.jpg,1
+158,Andreas-3469,Andreas,Fulham,Midfielder,88,2,1,4.5,Hoelgebaum Pereira,Andreas,156689.jpg,1
+159,Rodri-31513,Rodri,Man City,Midfielder,88,3,1,6.0,Hernandez,Rodrigo,220566.jpg,1
+168,Kulusevski-44618,Kulusevski,Spurs,Midfielder,85,13,1,8.0,Kulusevski,Dejan,445044.jpg,4
+177,Coutinho-292,Coutinho,Aston Villa,Midfielder,81,2,1,7.0,Coutinho Correia,Philippe,84583.jpg,1
+570,Steffen-31013,Steffen,Man City,Goalkeeper,0,0,1,4.0,Steffen,Zack,164484.jpg,3
+571,Ortega-32413,Ortega,Man City,Goalkeeper,0,0,1,4.0,Ortega Moreno,Stefan,88248.jpg,2

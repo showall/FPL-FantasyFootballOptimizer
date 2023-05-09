@@ -1,0 +1,16 @@
+,id,player_name,team,position,mins_played,points,round,cost,second_name,first_name,photo,holding_period
+0,White-101,White,Arsenal,Defender,90,5,2,4.5,White,Benjamin,198869.jpg,1
+1,Gabriel-161,Gabriel,Arsenal,Defender,90,7,2,5,dos Santos Magalhães,Gabriel,226597.jpg,4
+2,Saliba-261,Saliba,Arsenal,Defender,90,8,2,4.5,Saliba,William,462424.jpg,4
+3,Clyne-1577,Clyne,Crystal Palace,Forward,90,0,2,4.5,Clyne,Nathaniel,57328.jpg,3
+4,Andersen-1657,Andersen,Crystal Palace,Forward,90,1,2,4.5,Andersen,Joachim,174874.jpg,1
+5,Guéhi-1677,Guéhi,Crystal Palace,Forward,90,-1,2,4.5,Guéhi,Marc,209036.jpg,4
+76,Jorginho-1306,Jorginho,Chelsea,Midfielder,90,11,2,6,Frello Filho,Jorge Luiz,85955.jpg,3
+79,Tielemans-25910,Tielemans,Leicester,Midfielder,90,2,2,6.5,Tielemans,Youri,166989.jpg,4
+80,Maddison-26110,Maddison,Leicester,Midfielder,90,5,2,8,Maddison,James,172780.jpg,1
+81,Ndidi-26510,Ndidi,Leicester,Midfielder,90,2,2,5,Ndidi,Wilfred,203341.jpg,1
+83,Billing-703,Billing,Bournemouth,Midfielder,90,2,2,5.5,Billing,Philip,168991.jpg,3
+84,De Cordova-Reid-2059,De Cordova-Reid,Fulham,Midfielder,90,1,2,5.5,De Cordova-Reid,Bobby,96994.jpg,2
+90,Rashford-33514,Rashford,Man Utd,Midfielder,90,2,2,6.5,Rashford,Marcus,176297.jpg,3
+565,Smith-55720,Smith,Wolves,Goalkeeper,0,0,2,4,Smith,Jackson,246799.jpg,1
+566,Steele-1025,Steele,Brighton,Goalkeeper,0,0,2,4,Steele,Jason,49262.jpg,4
