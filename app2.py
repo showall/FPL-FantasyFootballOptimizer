@@ -43,7 +43,7 @@ for p in list(reversed(range(0, max_week))):
     except :
         next
 
-print(p_list)
+#print(p_list)
 past_selection_df = past_selection_df.rename(columns={"id" : "identifier","position":"player_position","mins_played":"player_minutes_played","points":"player_total_point_obtained",  "cost":"player_costs"
                      })
 
@@ -780,8 +780,8 @@ def update_selected_rows(selected_rows, gw, data):
         
         for wee in sorted(list(past_selection_df_new["round"].unique())):
             if wee < week_id :
-                print(wee)
-                print(past_selection_df_new)            
+                #print(wee)
+                #print(past_selection_df_new)            
                 cooling_period = week_id -   wee  
                 past_selection_df_new2 = past_selection_df_new[(past_selection_df_new["holding_period"] > cooling_period) & (past_selection_df_new["round"] ==wee)  ]["identifier"]
                 for x in past_selection_df_new2 :
@@ -794,7 +794,7 @@ def update_selected_rows(selected_rows, gw, data):
                 past_selection_df_new2_id= past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"]
                 bought = past_selection_df_new[past_selection_df_new["identifier"].isin( past_selection_df_new[(past_selection_df_new["round"] ==wee)]["identifier"]) & (past_selection_df_new["round"] == wee)]["player_costs"].sum()
                 print("bought",bought)
-                print(df_table)
+                #print(df_table)
                 #print(df_table[df_table["id"].isin( past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"] )& df_table["round"] == wee+1]["cost"])
                 sold = df_table[df_table["id"].isin( list(past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"]) )& (df_table["round"] == wee+1)]["cost"].sum()           
                 print("sold", sold)
