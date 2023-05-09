@@ -18,7 +18,7 @@ from helper import calculate_score
 from dash import dash_table
 import os
 
-app = dash.Dash(__name__, requests_pathname_prefix='/dashboard/',  external_stylesheets=[dbc.themes.BOOTSTRAP], routes_pathname_prefix='/dashboard/'
+app = dash.Dash(__name__, requests_pathname_prefix='/dashboard/' #,  external_stylesheets=[dbc.themes.BOOTSTRAP], routes_pathname_prefix='/dashboard/'
                 )
 dashboard_endpoint = "dashboard"
 
