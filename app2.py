@@ -49,10 +49,117 @@ past_selection_df = past_selection_df.rename(columns={"id" : "identifier","posit
                      })
 
 
+def present_table_2(df_result, week_id ) :
+    image_base_url = "https://resources.premierleague.com/premierleague/photos/players/250x250/p"  #p225321.png
+    basepic = html.Img(src= "assets/field.jpg", style={'height': '83%', 'width': '80%','position': 'absolute','top': f'{basepic_top_y}%', 'left': '5%'})     
+    df_result = df_result [ df_result["round"] == week_id ].sort_values("player_total_point_obtained" , ascending=False)
+    df_gk = df_result [ df_result["player_position"] == "Goalkeeper"].iloc[0:1]
+    df_fw =   df_result [ df_result["player_position"] == "Forward" ].iloc[0:3]
+    df_df =   df_result [ df_result["player_position"] == "Defender" ].iloc[0:5]
+    df_md =   df_result [ df_result["player_position"] == "Midfielder" ].iloc[0:6]
+
+    df_all = pd.concat([df_fw, df_df, df_md], axis=0).sort_values("player_total_point_obtained" , ascending=False).iloc[0:10]
+
+    try:
+        fw_count = df_all.value_counts("player_position")["Forward"]
+        df_count = df_all.value_counts("player_position")["Defender"]
+        md_count = df_all.value_counts("player_position")["Midfielder"]
+        df_fw =   df_all[ df_all["player_position"] == "Forward" ].iloc[0:fw_count].reset_index()
+        df_df =   df_all[ df_all["player_position"] == "Defender" ].iloc[0:df_count].reset_index()
+        df_md =   df_all[ df_all["player_position"] == "Midfielder" ].iloc[0: md_count].reset_index()
+        df_all = pd.concat([df_fw, df_df, df_md], axis=0).sort_values("player_total_point_obtained" , ascending=False).iloc[0:10]
+    except :
+        df_all = pd.concat([df_all.iloc[0:9], df_result [ df_result["player_position"] == "Forward" ].iloc[0:1]], axis=0).sort_values("player_total_point_obtained" , ascending=False).iloc[0:10]
+    df_all = pd.concat([df_all, df_gk], axis=0)
+#basepic = html.Img(src= "assets/field.jpg", style={'height': '550px', 'width': '600px','position': 'absolute','top': '5%', 'left': '5%'}) 
+# basepic_top_y = 25
+
+    first_row = []
+    first_row_b = []
+    for _,i in df_fw.iterrows() :  
+        length = len(df_fw) -1 
+        sp = max(320 - length * 100 ,100)
+        dist_to_first = 320 - sp
+        per_width = (dist_to_first*2)/(length + 0.0001)
+        ep = min(sp+_*per_width, 320 + dist_to_first)
+        label = i.photo
+        label = label.replace(".jpg",".png")
+        first_row.append(dbc.Col(html.Img(src= f"{image_base_url}{label}", style={'height': '13%', 'width': '10%','position': 'absolute','top': f'{basepic_top_y+5}%', 'left': f'{(ep)/8}%'})) )
+        first_row_b.append(dbc.Col(html.P(f"{i.player_name}, {i.player_total_point_obtained}pt", style={"font-size":"2vh","color":"white",'height': '70px', 'width': '70px','position': 'absolute','top': f'{basepic_top_y+5+14}%', 'left': f'{(ep+15)/8}%'})) )
+    first_row = dbc.Row(first_row)
+    first_row_b = dbc.Row(first_row_b)
+
+    sec_row = []
+    sec_row_b = []
+    for _,i in df_md.iterrows() :  
+        length= len(df_md) - 1
+        sp = max(320 - length * 100 ,100)
+        dist_to_first = 320 - sp
+        per_width = (dist_to_first*2)/(length + 0.0001)
+        ep = min(sp+_*per_width, 320 + dist_to_first)
+        label = i.photo
+        label = label.replace(".jpg",".png")
+        sec_row.append(dbc.Col(html.Img(src= f"{image_base_url}{label}", style={'height': '13%', 'width': '10%','position': 'absolute','top': f'{basepic_top_y+25}%', 'left': f'{(ep)/8}%'})) ) 
+        sec_row_b.append(dbc.Col(html.P(f"{i.player_name},{i.player_total_point_obtained}pt", style={"font-size":"2vh","color":"white",'height': '70px', 'width': '70px','position': 'absolute','top': f'{basepic_top_y+39}%', 'left': f'{(ep+15)/8}%'})) )
+    sec_row = dbc.Row(sec_row)
+    sec_row_b = dbc.Row(sec_row_b)
+
+    third_row = []
+    third_row_b = []
+    for _,i in df_df.iterrows() :  
+        length = len(df_df) -1
+        sp = max(320 - length * 100 ,100)
+        dist_to_first = 320 - sp
+        per_width = (dist_to_first*2)/(length + 0.0001)
+        ep = min(sp+_*per_width, 320 + dist_to_first)
+        label = i.photo
+        label = label.replace(".jpg",".png")
+        third_row.append(dbc.Col(html.Img(src= f"{image_base_url}{label}", style={'height': '13%', 'width': '10%','position': 'absolute','top': f'{basepic_top_y+47}%', 'left': f'{ep/8}%'})) )
+        third_row_b.append(dbc.Col(html.P(f"{i.player_name},{i.player_total_point_obtained}pt", style={"font-size":"2vh","color":"white",'height': '70px', 'width': '70px','position': 'absolute','top': f'{basepic_top_y+60}%', 'left': f'{(ep+15)/8}%'})) ) 
+    third_row = dbc.Row(third_row)
+    third_row_b = dbc.Row(third_row_b)
+
+    gk_row = []
+    gk_row_b = []
+    for _,i in df_gk.iterrows() :  
+        label = i.photo
+        label = label.replace(".jpg",".png")
+        gk_row.append(dbc.Col(html.Img(src= f"{image_base_url}{label}", style={'height': '13%', 'width': '10%','position': 'absolute','top': f'{basepic_top_y+64}%', 'left': f'40%'})) )
+        gk_row_b.append(dbc.Col(html.P(f"{i.player_name},{i.player_total_point_obtained}pt", style={"font-size":"2vh","color":"white",'height': '70px', 'width': '70px','position': 'absolute','top': f'{basepic_top_y+77}%', 'left': f'{(320+15)/8}%'})) ) 
+    gk_row = dbc.Row(gk_row)
+    gk_row_b = dbc.Row(gk_row_b)
+    final_format = [ basepic, first_row, first_row_b ,sec_row, sec_row_b, third_row, third_row_b, gk_row, gk_row_b]
+    return final_format
+
+
+def generate_score_2(df_tab_2, week_id):
+    total_score_2a = calculate_score( df_tab_2[df_tab_2["round"] == week_id] )
+    total_score_2b =   sum(calculate_score( df_tab_2[df_tab_2["round"] == j ]) for j in range (1,max_week+1)) 
+    total_score_2 = f"{total_score_2a} / {total_score_2b}"
+    total_cost_2a =  round( df_tab_2[df_tab_2["round"] == week_id]["player_costs"].sum()) 
+    total_cost_2b =  round(df_tab_2["player_costs"].sum())      
+    total_cost_2 =  f'{total_cost_2a} / {total_cost_2b}'
+
+    return total_score_2, total_cost_2
+
+
+
+
+
 
 # Define the section header
 header = html.Header(
-    [        html.H1("My Dashboard"),        html.P("This is a demo of a dashboard with a main container and a sidebar."),    ],
+    [        html.H1("Optimizing Fantasy Premier League"),   html.P(["This mimicks the Fantasy Premier League game where each user selects 15 players available for each Premier League gameweek in a season within a Budget." ,html.Br(), \
+                                                    "Points are awarded for their performances in the actual matches and the users with the highest points at the end of the season wins.", html.Br(), \
+                                                    "Rules :", html.Br(), \
+                                                    "- Each Week There Must Be A Selection of 15 Players in the Squad.", html.Br(),\
+                                                    "- Only The Top 11 Players' Points Will Be Counted.", html.Br(),\
+                                                    "- The Top 11 Players Must Include At Least One Player From Each Position. If The Goalkeeper Is Not One Of The Top 11 Performers, Then The Highest Goalkeeper's Points Will Be Counted + Top 10 Performers",html.Br(),\
+                                                    "- There Is A Budget Of 100 Million To Begin With In Week 1 As Gamers Need To Buy Within This Budget + Any Gain/Loss From Transactions For Each Week",html.Br(),\
+                                                    "- Players Are Subjected To Holding Period .ie. If A Player Has A Holding Period Of 2, He Must Not Be Sold For A Consecutive Two Weeks Period After Any Purchase.",html.Br(),\
+                                                    "- No More Than 3 Players Can Be Selected From The Same Team. ", html.Br(),\
+                                                    "- A Squad Is To Be Made Up of Goalkeepers(2), Forwards(min:2, max:4), Defenders(min:4, max:6) and MidFielders(min:3, max:7).",html.Br()
+                                                    ]),    ],
     style={"background-color": "#007bff", "color": "white", "padding": "20px"},
 )
 
@@ -532,7 +639,7 @@ container = dbc.Container(
                     className= "six columns" , style={"box-shadow": "1rem 1rem 2rem rgba(0,0,0,0.35)" , "padding": "10px" ,"margin": "10px" }
                 ),
                 dbc.Col(
-                    [html.H1("Sidebar"), 
+                    [html.H1("Options"), 
                      html.P("Your Are Viewing Data For :"), 
                      dcc.Dropdown(['Gameweek 1', 'Gameweek 2', 'Gameweek 3', 'Gameweek 4', 'Gameweek 5', 'Gameweek 6', 'Gameweek 7', 'Gameweek 8','Gameweek 9','Gameweek 10',
                                    'Gameweek 11', 'Gameweek 12', 'Gameweek 13', 'Gameweek 14', 'Gameweek 15', 'Gameweek 16', 'Gameweek 17', 'Gameweek 18','Gameweek 19','Gameweek 20',
@@ -718,25 +825,25 @@ def update_image(n_clicks, gameweek):
         final_format = [ basepic, first_row, first_row_b ,sec_row, sec_row_b, third_row, third_row_b, gk_row, gk_row_b]
         return final_format
 
-    df_tab_final_1 =  present_table( df_tab_1, week_id )      
-    df_tab_final_2 =  present_table( df_tab_2, week_id )        
-    df_tab_final_3 =  present_table( df_tab_3, week_id )     
+    df_tab_final_1 =  present_table_2( df_tab_1, week_id )      
+    df_tab_final_2 =  present_table_2( df_tab_2, week_id )        
+    df_tab_final_3 =  present_table_2( df_tab_3, week_id )     
 
   #  print(df_tab_final_1)
 
-    def generate_score(df_tab_2):
-        total_score_2a = calculate_score( df_tab_2[df_tab_2["round"] == week_id] )
-        total_score_2b =   sum(calculate_score( df_tab_2[df_tab_2["round"] == j ]) for j in range (1,max_week+1)) 
-        total_score_2 = f"{total_score_2a} / {total_score_2b}"
-        total_cost_2a =  round( df_tab_2[df_tab_2["round"] == week_id]["player_costs"].sum()) 
-        total_cost_2b =  round(df_tab_2["player_costs"].sum())      
-        total_cost_2 =  f'{total_cost_2a} / {total_cost_2b}'
+    # def generate_score(df_tab_2):
+    #     total_score_2a = calculate_score( df_tab_2[df_tab_2["round"] == week_id] )
+    #     total_score_2b =   sum(calculate_score( df_tab_2[df_tab_2["round"] == j ]) for j in range (1,max_week+1)) 
+    #     total_score_2 = f"{total_score_2a} / {total_score_2b}"
+    #     total_cost_2a =  round( df_tab_2[df_tab_2["round"] == week_id]["player_costs"].sum()) 
+    #     total_cost_2b =  round(df_tab_2["player_costs"].sum())      
+    #     total_cost_2 =  f'{total_cost_2a} / {total_cost_2b}'
 
-        return total_score_2, total_cost_2
+    #     return total_score_2, total_cost_2
 
-    total_score_1, total_cost_1 = generate_score(df_tab_1)
-    total_score_2, total_cost_2 = generate_score(df_tab_2)
-    total_score_3, total_cost_3 = generate_score(df_tab_3)
+    total_score_1, total_cost_1 = generate_score_2(df_tab_1, week_id)
+    total_score_2, total_cost_2 = generate_score_2(df_tab_2, week_id)
+    total_score_3, total_cost_3 = generate_score_2(df_tab_3, week_id)
 
         # html.Img(
         #     src='https://www.example.com/mini-image1.jpg', 
@@ -785,6 +892,7 @@ def update_selected_rows(selected_rows, gw, data):
         earliest_week = sorted(list(past_selection_df_new["round"]))[0]
         
         for wee in sorted(list(past_selection_df_new["round"].unique())):
+       # for wee in sorted(list(range(0,6))):
             if wee < week_id :
                 #print(wee)
                 #print(past_selection_df_new)            
