@@ -28,7 +28,7 @@ basepic_top_y = 25
 df = pd.read_csv("fpl_data.csv")
 max_week = max(df["round"])
 namelist = df["player_name"].unique().tolist()
-df_table = df.rename(columns={"identifier" : "id","player_position":"position","player_minutes_played":"mins_played","player_total_point_obtained":"points", "player_costs" :"cost"
+df_table = df.rename(columns={"identifier" : "id","player_position":"position","player_minutes_played":"mins_played","player_total_point_obtained":"points", "player_costs" :"price"
                      })
 df_table1  = df_table [df_table["round"]==1]
 
@@ -219,7 +219,7 @@ container = dbc.Container(
                                         ),
                         dash_table.DataTable(
                                         id='table_select',
-                                        columns=[{'name': i, 'id': i} for i in df_table.columns if i in  ["id","player_name","team","position","holding_period","cost","points","mins_played"]  ],
+                                        columns=[{'name': i, 'id': i} for i in df_table.columns if i in  ["id","player_name","team","position","holding_period","price","points","mins_played"]  ],
                                         data=df_table.to_dict('records'),
                                         column_selectable='single',
                                         selected_columns=[],
@@ -627,12 +627,12 @@ def update_image(n_clicks, gameweek):
     global past_selection_df
     if not(past_selection_df.empty):
         df_tab_1  = past_selection_df
-        df_tab_1 =  df_tab_1.rename(columns={"id" : "identifier","position":"player_position","mins_played":"player_minutes_played","points":"player_total_point_obtained",  "cost":"player_costs"
+        df_tab_1 =  df_tab_1.rename(columns={"id" : "identifier","position":"player_position","mins_played":"player_minutes_played","points":"player_total_point_obtained",  "price":"player_costs"
                      })
     else :
         df_tab_1 = pd.read_csv("data.csv")
     
-    print(df_tab_1)
+   # print(df_tab_1)
     df_tab_2 = pd.read_csv("df_tab_2.csv")
     df_tab_3 = pd.read_csv("df_tab_3.csv")
     basepic = html.Img(src= "assets/field.jpg", style={'height': '83%', 'width': '80%','position': 'absolute','top': f'{basepic_top_y}%', 'left': '5%'})     
@@ -722,6 +722,7 @@ def update_image(n_clicks, gameweek):
     df_tab_final_2 =  present_table( df_tab_2, week_id )        
     df_tab_final_3 =  present_table( df_tab_3, week_id )     
 
+  #  print(df_tab_final_1)
 
     def generate_score(df_tab_2):
         total_score_2a = calculate_score( df_tab_2[df_tab_2["round"] == week_id] )
@@ -772,6 +773,7 @@ def update_image(n_clicks, gameweek):
 def update_selected_rows(selected_rows, gw, data):
     # Implement your custom logic here to restrict the selection of rows based on column values.
     # For example, to restrict the selection of rows where Column1=="A" to 3 rows, you could use the following code:
+
     week_id = int(gw.split(" ")[-1])
     df_table2  = df_table [df_table["round"]==week_id]
     serving = []
@@ -793,22 +795,25 @@ def update_selected_rows(selected_rows, gw, data):
                         serving.append(x)
                     else:
                         next
+        
+        bought = 0
+        sold = 0
         for wee in sorted(list(past_selection_df_new["round"].unique())):
             if wee < week_id :
                 past_selection_df_new2_id= past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"]
-                bought = past_selection_df_new[past_selection_df_new["identifier"].isin( past_selection_df_new[(past_selection_df_new["round"] ==wee)]["identifier"]) & (past_selection_df_new["round"] == wee)]["player_costs"].sum()
-                print("bought",bought)
+                bought += past_selection_df_new[past_selection_df_new["identifier"].isin( past_selection_df_new[(past_selection_df_new["round"] ==wee)]["identifier"]) & (past_selection_df_new["round"] == wee)]["player_costs"].sum()
+               # print("bought",bought)
                 #print(df_table)
                 #print(df_table[df_table["id"].isin( past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"] )& df_table["round"] == wee+1]["cost"])
-                sold = df_table[df_table["id"].isin( list(past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"]) )& (df_table["round"] == wee+1)]["cost"].sum()           
-                print("sold", sold)
+                sold += df_table[df_table["id"].isin( list(past_selection_df_new[(past_selection_df_new["round"] ==wee)  ]["identifier"]) )& (df_table["round"] == wee+1)]["price"].sum()           
+                # print("sold", sold)
                 budget =  round(sold- bought + 100, 2)
             else :
                 budget =  100
-    print (serving)
+    #print (gw, serving)
     
     #selected_players = df_table2[df_table2.index.isin(selected_rows)]["id"]
-    selected_players = [data[i]["id"] for i in selected_rows]
+    selected_players = [data[i]["id"] for i in selected_rows]  
     selected_players.extend(serving)
    # print (selected_players)
     selected_df = df_table2[df_table2.id.isin(selected_players)]
@@ -828,7 +833,7 @@ def update_selected_rows(selected_rows, gw, data):
         df_table2 = df_table2[(df_table2["position"]=="xxxx")  | (df_table2["id"].isin( selected_players))]
         
     # GOT ANY SELECTION FILE SAVED ???
-    if selected_df["cost"].sum() > budget:         
+    if selected_df["price"].sum() > budget:         
         df_table2 = df_table2[ (df_table2["position"]=="xxxx") | (df_table2["id"].isin( selected_players))]
     df_table2 = df_table2.reset_index()
     selected_rows_2 = df_table2.loc[df_table2['id'].isin(selected_players)].index.tolist()
@@ -841,7 +846,7 @@ def update_selected_rows(selected_rows, gw, data):
     selected_df   = selected_df [selected_df ["position"]=="Defender"]["player_name"].tolist()    
 
     score_card = df_table2.loc[df_table2['id'].isin(selected_players)]["points"].sum()
-    budget_card = budget - df_table2.loc[df_table2['id'].isin(selected_players)]["cost"].sum()
+    budget_card = budget - df_table2.loc[df_table2['id'].isin(selected_players)]["price"].sum()
     size_card = f"{len(set(selected_players))}/15"
 
     return df_table2.to_dict('records') , selected_rows_2 , selected_fw, selected_md, selected_df, selected_gk,  budget_card, score_card, size_card

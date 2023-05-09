@@ -1,91 +1,91 @@
 identifier,player_name,team,player_position,player_minutes_played,player_total_point_obtained,round,player_costs,second_name,first_name,photo,holding_period,Cost,Gain/Loss
-Ederson-30713,Ederson,Man City,Goalkeeper,90,7,1,5.335,Santana de Moraes,Ederson,121160.jpg,3,5.335,0.0
-Henderson-39816,Henderson,Nott'm Forest,Goalkeeper,90,3,1,4.41,Henderson,Dean,172649.jpg,2,4.41,0.0
-Solanke-663,Solanke,Bournemouth,Forward,90,2,1,5.82,Solanke,Dominic,154566.jpg,3,5.82,0.0
-Toney-804,Toney,Brentford,Forward,90,8,1,6.93,Toney,Ivan,144485.jpg,1,6.93,0.0
+Mendy-1476,Mendy,Chelsea,Goalkeeper,90,7,1,4.95,Mendy,Edouard,228286.jpg,1,4.95,0.0
+Alisson-28112,Alisson,Liverpool,Goalkeeper,90,1,1,5.39,Ramses Becker,Alisson,116535.jpg,2,5.39,0.0
 Mitrović-2109,Mitrović,Fulham,Forward,90,13,1,6.305,Mitrović,Aleksandar,128389.jpg,3,6.305,0.0
+Toney-804,Toney,Brentford,Forward,90,8,1,6.93,Toney,Ivan,144485.jpg,1,6.93,0.0
 Haaland-31813,Haaland,Man City,Forward,77,13,1,11.27,Haaland,Erling,223094.jpg,2,11.27,0.0
-Son-42818,Son,Spurs,Midfielder,90,5,1,11.76,Heung-min,Son,85971.jpg,2,11.76,0.0
+Martinelli-191,Martinelli,Arsenal,Midfielder,90,8,1,5.88,Martinelli Silva,Gabriel,444145.jpg,2,5.88,0.0
 Groß-1045,Groß,Brighton,Midfielder,90,15,1,5.335,Groß,Pascal,60307.jpg,3,5.335,0.0
+Salah-28312,Salah,Liverpool,Midfielder,90,12,1,12.87,Salah,Mohamed,118748.jpg,1,12.87,0.0
+Son-42818,Son,Spurs,Midfielder,90,5,1,11.76,Heung-min,Son,85971.jpg,2,11.76,0.0
+Lerma-643,Lerma,Bournemouth,Midfielder,90,10,1,4.9,Lerma Solís,Jefferson,152551.jpg,2,4.9,0.0
 Ward-Prowse-40717,Ward-Prowse,Southampton,Midfielder,90,9,1,6.435,Ward-Prowse,James,101178.jpg,1,6.435,0.0
-Podence-48320,Podence,Wolves,Midfielder,90,10,1,5.279999999999999,Castelo Podence,Daniel,200600.jpg,4,5.279999999999999,0.0
-Sterling-3046,Sterling,Chelsea,Midfielder,90,3,1,9.6,Sterling,Raheem,103955.jpg,4,9.6,0.0
-James-1466,James,Chelsea,Defender,90,7,1,5.76,James,Reece,225796.jpg,4,5.76,0.0
-Castagne-25810,Castagne,Leicester,Defender,90,8,1,4.365,Castagne,Timothy,166477.jpg,3,4.365,0.0
-Cancelo-30613,Cancelo,Man City,Defender,90,7,1,6.93,Cancelo,João,121145.jpg,1,6.93,0.0
-Burn-35815,Burn,Newcastle,Defender,90,6,1,4.455,Burn,Dan,78916.jpg,1,4.455,0.0
-Henderson-39816,Henderson,Nott'm Forest,Goalkeeper,90,14,2,4.41,Henderson,Dean,172649.jpg,2,4.41,0.0
-Ederson-30713,Ederson,Man City,Goalkeeper,90,6,2,5.335,Santana de Moraes,Ederson,121160.jpg,3,5.335,0.0
+Schär-36615,Schär,Newcastle,Defender,90,15,1,4.365,Schär,Fabian,119471.jpg,3,4.365,0.0
+Targett-36715,Targett,Newcastle,Defender,90,8,1,4.9,Targett,Matt,169359.jpg,2,4.9,0.0
+Salisu-42017,Salisu,Southampton,Defender,90,-2,1,4.365,Salisu,Mohammed,450527.jpg,3,4.365,0.0
+Robinson-2179,Robinson,Fulham,Defender,90,1,1,4.32,Robinson,Antonee,169528.jpg,4,4.32,0.0
+Alisson-28112,Alisson,Liverpool,Goalkeeper,90,2,2,5.39,Ramses Becker,Alisson,116535.jpg,2,5.39,0.0
+Pope-37615,Pope,Newcastle,Goalkeeper,90,10,2,4.9,Pope,Nick,98747.jpg,2,4.9,0.0
 Mitrović-2109,Mitrović,Fulham,Forward,90,-1,2,6.401999999999999,Mitrović,Aleksandar,128389.jpg,3,6.305,0.09699999999999953
+Toney-804,Toney,Brentford,Forward,90,9,2,6.93,Toney,Ivan,144485.jpg,1,6.93,0.0
+Kane-42718,Kane,Spurs,Forward,90,8,2,11.172,Kane,Harry,78830.jpg,2,11.172,0.0
 Jesus-281,Jesus,Arsenal,Forward,83,19,2,7.84,Fernando de Jesus,Gabriel,205651.jpg,2,7.84,0.0
 Haaland-31813,Haaland,Man City,Forward,73,5,2,11.368,Haaland,Erling,223094.jpg,2,11.27,0.09800000000000075
-Solanke-663,Solanke,Bournemouth,Forward,0,0,2,5.82,Solanke,Dominic,154566.jpg,3,5.82,0.0
+Lerma-643,Lerma,Bournemouth,Midfielder,90,0,2,4.9,Lerma Solís,Jefferson,152551.jpg,2,4.9,0.0
 Groß-1045,Groß,Brighton,Midfielder,90,3,2,5.4319999999999995,Groß,Pascal,60307.jpg,3,5.335,0.09699999999999953
-Højbjerg-43318,Højbjerg,Spurs,Midfielder,90,10,2,5.279999999999999,Højbjerg,Pierre-Emile,132015.jpg,4,5.279999999999999,0.0
-Podence-48320,Podence,Wolves,Midfielder,90,2,2,5.279999999999999,Castelo Podence,Daniel,200600.jpg,4,5.279999999999999,0.0
-Sterling-3046,Sterling,Chelsea,Midfielder,83,5,2,9.6,Sterling,Raheem,103955.jpg,4,9.6,0.0
+Martinelli-191,Martinelli,Arsenal,Midfielder,90,8,2,5.978,Martinelli Silva,Gabriel,444145.jpg,2,5.88,0.09799999999999986
 Son-42818,Son,Spurs,Midfielder,78,2,2,11.76,Heung-min,Son,85971.jpg,2,11.76,0.0
-Cancelo-30613,Cancelo,Man City,Defender,90,11,2,6.93,Cancelo,João,121145.jpg,1,6.93,0.0
-Burn-35815,Burn,Newcastle,Defender,90,7,2,4.455,Burn,Dan,78916.jpg,1,4.455,0.0
-Castagne-25810,Castagne,Leicester,Defender,90,0,2,4.365,Castagne,Timothy,166477.jpg,3,4.365,0.0
-James-1466,James,Chelsea,Defender,90,7,2,5.76,James,Reece,225796.jpg,4,5.76,0.0
+Salisu-42017,Salisu,Southampton,Defender,90,0,2,4.365,Salisu,Mohammed,450527.jpg,3,4.365,0.0
+Schär-36615,Schär,Newcastle,Defender,90,5,2,4.462,Schär,Fabian,119471.jpg,3,4.365,0.09699999999999953
+Robinson-2179,Robinson,Fulham,Defender,90,6,2,4.32,Robinson,Antonee,169528.jpg,4,4.32,0.0
+Targett-36715,Targett,Newcastle,Defender,0,0,2,4.9,Targett,Matt,169359.jpg,2,4.9,0.0
+Pope-37615,Pope,Newcastle,Goalkeeper,90,3,3,4.9,Pope,Nick,98747.jpg,2,4.9,0.0
 Martínez-312,Martínez,Aston Villa,Goalkeeper,90,10,3,4.9,Martínez Romero,Emiliano,98980.jpg,2,4.9,0.0
-Ederson-30713,Ederson,Man City,Goalkeeper,90,1,3,5.335,Santana de Moraes,Ederson,121160.jpg,3,5.335,0.0
+Toney-804,Toney,Brentford,Forward,90,8,3,7.029,Toney,Ivan,144485.jpg,1,7.029,0.0
 Jesus-281,Jesus,Arsenal,Forward,90,4,3,7.938,Fernando de Jesus,Gabriel,205651.jpg,2,7.84,0.09799999999999986
+Kane-42718,Kane,Spurs,Forward,90,6,3,11.172,Kane,Harry,78830.jpg,2,11.172,0.0
 Mitrović-2109,Mitrović,Fulham,Forward,90,6,3,6.401999999999999,Mitrović,Aleksandar,128389.jpg,3,6.305,0.09699999999999953
-Solanke-663,Solanke,Bournemouth,Forward,0,0,3,5.723,Solanke,Dominic,154566.jpg,3,5.82,-0.09700000000000042
 Groß-1045,Groß,Brighton,Midfielder,90,6,3,5.529,Groß,Pascal,60307.jpg,3,5.335,0.19399999999999995
-Højbjerg-43318,Højbjerg,Spurs,Midfielder,90,2,3,5.279999999999999,Højbjerg,Pierre-Emile,132015.jpg,4,5.279999999999999,0.0
-Mac Allister-1165,Mac Allister,Brighton,Midfielder,90,11,3,5.279999999999999,Mac Allister,Alexis,243016.jpg,4,5.279999999999999,0.0
-Sterling-3046,Sterling,Chelsea,Midfielder,86,1,3,9.6,Sterling,Raheem,103955.jpg,4,9.6,0.0
-Harrison-23311,Harrison,Leeds,Midfielder,82,14,3,5.9399999999999995,Harrison,Jack,221399.jpg,1,5.9399999999999995,0.0
-Podence-48320,Podence,Wolves,Midfielder,58,1,3,5.279999999999999,Castelo Podence,Daniel,200600.jpg,4,5.279999999999999,0.0
-Castagne-25810,Castagne,Leicester,Defender,90,1,3,4.365,Castagne,Timothy,166477.jpg,3,4.365,0.0
-Mitchell-1707,Mitchell,Crystal Palace,Defender,90,6,3,4.455,Mitchell,Tyrick,244723.jpg,1,4.455,0.0
-Dunk-1065,Dunk,Brighton,Defender,90,6,3,4.455,Dunk,Lewis,83299.jpg,1,4.455,0.0
-James-1466,James,Chelsea,Defender,90,1,3,5.856,James,Reece,225796.jpg,4,5.76,0.09600000000000009
+Salah-28312,Salah,Liverpool,Midfielder,90,8,3,12.87,Salah,Mohamed,118748.jpg,1,12.87,0.0
+Gray-1898,Gray,Everton,Midfielder,90,9,3,5.39,Gray,Demarai,172632.jpg,2,5.39,0.0
+Rashford-33514,Rashford,Man Utd,Midfielder,85,10,3,6.111,Rashford,Marcus,176297.jpg,3,6.111,0.0
+Zaha-1607,Zaha,Crystal Palace,Midfielder,81,12,3,6.79,Zaha,Wilfried,82403.jpg,3,6.79,0.0
+Robinson-2179,Robinson,Fulham,Defender,90,1,3,4.32,Robinson,Antonee,169528.jpg,4,4.32,0.0
+Schär-36615,Schär,Newcastle,Defender,90,0,3,4.462,Schär,Fabian,119471.jpg,3,4.365,0.09699999999999953
+Salisu-42017,Salisu,Southampton,Defender,90,2,3,4.268,Salisu,Mohammed,450527.jpg,3,4.365,-0.09700000000000042
+White-101,White,Arsenal,Defender,74,7,3,4.455,White,Benjamin,198869.jpg,1,4.455,0.0
 Martínez-312,Martínez,Aston Villa,Goalkeeper,90,2,4,4.9,Martínez Romero,Emiliano,98980.jpg,2,4.9,0.0
-Henderson-39816,Henderson,Nott'm Forest,Goalkeeper,90,9,4,4.508,Henderson,Dean,172649.jpg,2,4.508,0.0
+De Gea-32714,De Gea,Man Utd,Goalkeeper,90,8,4,4.8020000000000005,De Gea Quintana,David,51940.jpg,2,4.8020000000000005,0.0
 Kane-42718,Kane,Spurs,Forward,90,10,4,11.172,Kane,Harry,78830.jpg,2,11.172,0.0
 Haaland-31813,Haaland,Man City,Forward,83,17,4,11.466,Haaland,Erling,223094.jpg,2,11.466,0.0
 Firmino-27912,Firmino,Liverpool,Forward,68,22,4,7.84,Firmino,Roberto,92217.jpg,2,7.84,0.0
+Rashford-33514,Rashford,Man Utd,Midfielder,90,3,4,6.111,Rashford,Marcus,176297.jpg,3,6.111,0.0
 Groß-1045,Groß,Brighton,Midfielder,90,11,4,5.529,Groß,Pascal,60307.jpg,3,5.529,0.0
-Mac Allister-1165,Mac Allister,Brighton,Midfielder,90,2,4,5.279999999999999,Mac Allister,Alexis,243016.jpg,4,5.279999999999999,0.0
-Fornals-46919,Fornals,West Ham,Midfielder,90,11,4,5.346,Fornals Malla,Pablo,217593.jpg,1,5.346,0.0
-Højbjerg-43318,Højbjerg,Spurs,Midfielder,90,3,4,5.279999999999999,Højbjerg,Pierre-Emile,132015.jpg,4,5.279999999999999,0.0
-Sterling-3046,Sterling,Chelsea,Midfielder,74,15,4,9.504,Sterling,Raheem,103955.jpg,4,9.6,-0.09600000000000009
-Podence-48320,Podence,Wolves,Midfielder,7,1,4,5.279999999999999,Castelo Podence,Daniel,200600.jpg,4,5.279999999999999,0.0
-James-1466,James,Chelsea,Defender,90,7,4,5.856,James,Reece,225796.jpg,4,5.76,0.09600000000000009
-Van Dijk-28012,Van Dijk,Liverpool,Defender,90,12,4,6.24,van Dijk,Virgil,97032.jpg,4,6.24,0.0
-Zouma-46119,Zouma,West Ham,Defender,90,9,4,4.455,Zouma,Kurt,103192.jpg,1,4.455,0.0
+Neves-48020,Neves,Wolves,Midfielder,90,10,4,5.279999999999999,da Silva Neves,Rúben,171317.jpg,4,5.279999999999999,0.0
+Gray-1898,Gray,Everton,Midfielder,90,2,4,5.39,Gray,Demarai,172632.jpg,2,5.39,0.0
+Janelt-864,Janelt,Brentford,Midfielder,21,6,4,5.445,Janelt,Vitaly,204580.jpg,1,5.445,0.0
+Zaha-1607,Zaha,Crystal Palace,Midfielder,0,0,4,6.887,Zaha,Wilfried,82403.jpg,3,6.79,0.09699999999999953
 Dalot-34214,Dalot,Man Utd,Defender,90,11,4,4.312,Dalot Teixeira,Diogo,216051.jpg,2,4.312,0.0
-Ederson-30713,Ederson,Man City,Goalkeeper,90,6,5,5.335,Santana de Moraes,Ederson,121160.jpg,3,5.335,0.0
-Henderson-39816,Henderson,Nott'm Forest,Goalkeeper,90,0,5,4.508,Henderson,Dean,172649.jpg,2,4.508,0.0
-Mitrović-2109,Mitrović,Fulham,Forward,90,9,5,6.499,Mitrović,Aleksandar,128389.jpg,3,6.499,0.0
+Robinson-2179,Robinson,Fulham,Defender,90,0,4,4.32,Robinson,Antonee,169528.jpg,4,4.32,0.0
+Robertson-28412,Robertson,Liverpool,Defender,68,9,4,6.6930000000000005,Robertson,Andrew,122798.jpg,3,6.6930000000000005,0.0
+Targett-36715,Targett,Newcastle,Defender,25,1,4,4.8020000000000005,Targett,Matt,169359.jpg,2,4.8020000000000005,0.0
+De Gea-32714,De Gea,Man Utd,Goalkeeper,90,6,5,4.8020000000000005,De Gea Quintana,David,51940.jpg,2,4.8020000000000005,0.0
+Alisson-28112,Alisson,Liverpool,Goalkeeper,90,2,5,5.39,Ramses Becker,Alisson,116535.jpg,2,5.39,0.0
 Firmino-27912,Firmino,Liverpool,Forward,90,9,5,7.84,Firmino,Roberto,92217.jpg,2,7.84,0.0
 Kane-42718,Kane,Spurs,Forward,90,5,5,11.172,Kane,Harry,78830.jpg,2,11.172,0.0
-A.Armstrong-40817,A.Armstrong,Southampton,Forward,85,9,5,5.445,Armstrong,Adam,155511.jpg,1,5.445,0.0
 Haaland-31813,Haaland,Man City,Forward,68,17,5,11.564,Haaland,Erling,223094.jpg,2,11.466,0.09800000000000075
 Groß-1045,Groß,Brighton,Midfielder,90,2,5,5.6259999999999994,Groß,Pascal,60307.jpg,3,5.529,0.09699999999999953
-Mac Allister-1165,Mac Allister,Brighton,Midfielder,90,10,5,5.279999999999999,Mac Allister,Alexis,243016.jpg,4,5.279999999999999,0.0
-Højbjerg-43318,Højbjerg,Spurs,Midfielder,90,2,5,5.279999999999999,Højbjerg,Pierre-Emile,132015.jpg,4,5.279999999999999,0.0
+Zaha-1607,Zaha,Crystal Palace,Midfielder,90,7,5,6.887,Zaha,Wilfried,82403.jpg,3,6.79,0.09699999999999953
+Martinelli-191,Martinelli,Arsenal,Midfielder,90,10,5,6.272,Martinelli Silva,Gabriel,444145.jpg,2,6.272,0.0
 Soucek-46819,Soucek,West Ham,Midfielder,90,10,5,5.184,Soucek,Tomas,215439.jpg,4,5.184,0.0
+Neves-48020,Neves,Wolves,Midfielder,90,2,5,5.279999999999999,da Silva Neves,Rúben,171317.jpg,4,5.279999999999999,0.0
+Rashford-33514,Rashford,Man Utd,Midfielder,86,6,5,6.111,Rashford,Marcus,176297.jpg,3,6.111,0.0
+Targett-36715,Targett,Newcastle,Defender,90,1,5,4.8020000000000005,Targett,Matt,169359.jpg,2,4.8020000000000005,0.0
 Dalot-34214,Dalot,Man Utd,Defender,90,8,5,4.312,Dalot Teixeira,Diogo,216051.jpg,2,4.312,0.0
-Van Dijk-28012,Van Dijk,Liverpool,Defender,90,2,5,6.24,van Dijk,Virgil,97032.jpg,4,6.24,0.0
-Collins-51620,Collins,Wolves,Defender,90,7,5,4.32,Collins,Nathan,432830.jpg,4,4.32,0.0
-Cancelo-30613,Cancelo,Man City,Defender,67,12,5,7.029,Cancelo,João,121145.jpg,1,7.029,0.0
-Pickford-1828,Pickford,Everton,Goalkeeper,90,9,6,4.32,Pickford,Jordan,111234.jpg,4,4.32,0.0
-Ederson-30713,Ederson,Man City,Goalkeeper,90,2,6,5.335,Santana de Moraes,Ederson,121160.jpg,3,5.335,0.0
-Toney-804,Toney,Brentford,Forward,90,17,6,7.029,Toney,Ivan,144485.jpg,1,7.029,0.0
-Mitrović-2109,Mitrović,Fulham,Forward,90,5,6,6.596,Mitrović,Aleksandar,128389.jpg,3,6.499,0.09700000000000042
+Robertson-28412,Robertson,Liverpool,Defender,70,2,5,6.6930000000000005,Robertson,Andrew,122798.jpg,3,6.6930000000000005,0.0
+White-101,White,Arsenal,Defender,64,8,5,4.455,White,Benjamin,198869.jpg,1,4.455,0.0
+Alisson-28112,Alisson,Liverpool,Goalkeeper,90,8,6,5.39,Ramses Becker,Alisson,116535.jpg,2,5.39,0.0
+Pope-37615,Pope,Newcastle,Goalkeeper,90,12,6,4.9,Pope,Nick,98747.jpg,2,4.9,0.0
 Solanke-663,Solanke,Bournemouth,Forward,90,12,6,5.529,Solanke,Dominic,154566.jpg,3,5.529,0.0
-Kane-42718,Kane,Spurs,Forward,77,9,6,11.172,Kane,Harry,78830.jpg,2,11.172,0.0
-Bailey-452,Bailey,Aston Villa,Midfielder,90,8,6,4.6530000000000005,Bailey,Leon,215711.jpg,1,4.6530000000000005,0.0
-Soucek-46819,Soucek,West Ham,Midfielder,90,2,6,5.184,Soucek,Tomas,215439.jpg,4,5.184,0.0
-Mac Allister-1165,Mac Allister,Brighton,Midfielder,90,14,6,5.279999999999999,Mac Allister,Alexis,243016.jpg,4,5.279999999999999,0.0
+Haaland-31813,Haaland,Man City,Forward,90,9,6,11.662,Haaland,Erling,223094.jpg,2,11.662,0.0
+Toney-804,Toney,Brentford,Forward,90,17,6,7.029,Toney,Ivan,144485.jpg,1,7.029,0.0
+Martinelli-191,Martinelli,Arsenal,Midfielder,90,2,6,6.37,Martinelli Silva,Gabriel,444145.jpg,2,6.272,0.09799999999999986
 Groß-1045,Groß,Brighton,Midfielder,90,5,6,5.723,Groß,Pascal,60307.jpg,3,5.529,0.19399999999999995
-Podence-48320,Podence,Wolves,Midfielder,81,11,6,5.279999999999999,Castelo Podence,Daniel,200600.jpg,4,5.279999999999999,0.0
-Collins-51620,Collins,Wolves,Defender,90,9,6,4.32,Collins,Nathan,432830.jpg,4,4.32,0.0
-Cancelo-30613,Cancelo,Man City,Defender,90,2,6,7.029,Cancelo,João,121145.jpg,1,7.029,0.0
-Andersen-1657,Andersen,Crystal Palace,Defender,90,7,6,4.455,Andersen,Joachim,174874.jpg,1,4.455,0.0
-Van Dijk-28012,Van Dijk,Liverpool,Defender,90,5,6,6.24,van Dijk,Virgil,97032.jpg,4,6.24,0.0
+Neves-48020,Neves,Wolves,Midfielder,90,2,6,5.279999999999999,da Silva Neves,Rúben,171317.jpg,4,5.279999999999999,0.0
+Soucek-46819,Soucek,West Ham,Midfielder,90,2,6,5.184,Soucek,Tomas,215439.jpg,4,5.184,0.0
+Højbjerg-43318,Højbjerg,Spurs,Midfielder,90,9,6,5.279999999999999,Højbjerg,Pierre-Emile,132015.jpg,4,5.279999999999999,0.0
+Rashford-33514,Rashford,Man Utd,Midfielder,79,18,6,6.208,Rashford,Marcus,176297.jpg,3,6.208,0.0
+Schär-36615,Schär,Newcastle,Defender,90,6,6,4.559,Schär,Fabian,119471.jpg,3,4.559,0.0
+Aït-Nouri-48720,Aït-Nouri,Wolves,Defender,90,6,6,4.224,Aït-Nouri,Rayan,448514.jpg,4,4.224,0.0
+Targett-36715,Targett,Newcastle,Defender,78,6,6,4.8020000000000005,Targett,Matt,169359.jpg,2,4.8020000000000005,0.0
+Robertson-28412,Robertson,Liverpool,Defender,31,1,6,6.596,Robertson,Andrew,122798.jpg,3,6.6930000000000005,-0.09700000000000042

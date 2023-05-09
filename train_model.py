@@ -46,7 +46,7 @@ def train_forward_model (df_sub, model, players_pool,weeks, teams, gain_loss, pr
                         for player in players_pool for week in weeks if not df_sub.loc[(df_sub['identifier'] == player) & (df_sub['round'] == week)].empty)
         total_holding_P = sum(df_all.loc[(df_all['identifier'] == player) & (df_all['round'] == week), 'holding_period'].values[0] * model.x[player, week]
                                    for player in players_pool for week in weeks if not (df_all.loc[(df_all['identifier'] == player) & (df_all['round'] == week)].empty))       
-        objective = total_point_obtained - 0.3 * (budget +  gain_loss - total_cost)  -0.55 *  total_holding_P
+        objective = total_point_obtained - 0.3 * (budget +  gain_loss - total_cost)  -0.25 *  total_holding_P
         return objective
 
     try:
@@ -98,6 +98,17 @@ def train_forward_model (df_sub, model, players_pool,weeks, teams, gain_loss, pr
         del model.min_defenders_con_index
     model.min_defenders_con = Constraint(weeks, rule=min_defenders_constraint)  
 
+    # def min_defenders_constraint_2(model, week):
+    #     return sum(model.x[player, week] for player in players_pool if 
+    #             ((((( df_sub['identifier'] == player) & (df_sub['round'] == week)).any()) and
+    #             (df_sub.loc[((df_sub['identifier'] == player) & (df_sub['round'] == week)), 
+    #                         'player_position'].values[0] == 'Defender')) and 
+    #                 ((df_sub.loc[((df_sub['identifier'] == player) & (df_sub['round'] == week)), 'player_minutes_played'].values[0] > 0))))>= 3
+    # if 'min_defenders_con' in model.component_map(Constraint):
+    #     del model.min_defenders_con_2
+    #     del model.min_defenders_con_index_2
+    # model.min_defenders_con_2 = Constraint(weeks, rule=min_defenders_constraint_2)  
+
     def min_forwards_constraint(model, week):
         return sum(model.x[player, week] for player in players_pool if
                 ((((( df_sub['identifier'] == player) & (df_sub['round'] == week)).any()) and
@@ -108,7 +119,19 @@ def train_forward_model (df_sub, model, players_pool,weeks, teams, gain_loss, pr
         del model.min_forwards_con 
         del model.min_forwards_con_index 
     model.min_forwards_con = Constraint(weeks, rule=min_forwards_constraint)
-    
+
+
+    # def min_forwards_constraint_2(model, week):
+    #     return sum(model.x[player, week] for player in players_pool if
+    #             ((((( df_sub['identifier'] == player) & (df_sub['round'] == week)).any()) and
+    #             (df_sub.loc[((df_sub['identifier'] == player) & (df_sub['round'] == week)), 
+    #                         'player_position'].values[0] == 'Forward')) and 
+    # ((df_sub.loc[((df_sub['identifier'] == player) & (df_sub['round'] == week)), 'player_minutes_played'].values[0] >= 0)))) >= 2
+    # if 'min_forwards_con_2' in model.component_map(Constraint):
+    #     del model.min_forwards_con_2 
+    #     del model.min_forwards_con_index_2 
+    # model.min_forwards_con_2 = Constraint(weeks, rule=min_forwards_constraint_2)
+
     def max_forwards_constraint(model,week):
         return sum(model.x[player, week] for player in players_pool if 
                 ((((( df_sub['identifier'] == player) & (df_sub['round'] == week)).any()) and
