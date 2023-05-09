@@ -36,10 +36,9 @@ p_list = []
 past_selection_df = pd.DataFrame({})
 for p in list(reversed(range(0, max_week))):
     try :
-        with open(f"selection-week{p}.csv") as f :
-            df_temp = pd.read_csv(f, encoding='latin1')
-            past_selection_df = pd.concat([past_selection_df, df_temp])
-            p_list.append(p)
+        df_temp = pd.read_csv("selection-week{p}.csv", encoding='latin1')
+        past_selection_df = pd.concat([past_selection_df, df_temp])
+        p_list.append(p)
     except :
         next
 

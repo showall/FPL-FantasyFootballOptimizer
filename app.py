@@ -105,6 +105,8 @@ def loading_data(id : int):
             break
         df_temp = df_sub_sub[df_sub_sub.identifier.isin(player_list)]
         df_result = pd.concat([df_result,df_temp[df_temp["round"]==week]], axis=0)
+        
+        
         df_result_overall_1 = pd.concat([df_result_overall_1,df_result], axis=0)       
         for i in model_.x:
             if model_.x[i].value == 1 :
