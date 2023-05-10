@@ -269,12 +269,12 @@ container = dbc.Container(
                     ]),
 
                       #  html.H4(className='what-is', children='What is Manhattan Plot?'),
-                        html.Div(id="rand-container",  children=[
+                        dcc.Loading( html.Div(id="rand-container",  children=[
                         html.Img(src= "assets/field.jpg", style={'height': '83%', 'width': '80%','position': 'absolute','top': f'{basepic_top_y}%', 'left': '5%'})  ,
                           ], 
                        style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', "height" : "80vh"} ,
     
-                    ),
+                    ) ),
 
                     html.Div(children = [ dbc.Row(
                                             [
@@ -465,10 +465,46 @@ container = dbc.Container(
                     ]),
 
                        # html.H4(className='what-is', children='What is Manhattan Plot?'),
-                        html.Div(id="opt-container",  children=[
+                        dcc.Loading([html.Div(id="opt-container",  children=[ 
                         html.Img(src= "assets/field.jpg", style={'height': '83%', 'width': '80%','position': 'absolute','top': f'{basepic_top_y}%', 'left': '5%'})   ], 
                        style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', "height" : "80vh"} ,
                     ),
+
+                    html.Div(children = [
+                        dash_table.DataTable(
+                                        id='table_select-2',
+                                        columns=[{'name': i, 'id': i} for i in df_table.columns if i in  ["id","player_name","team","position","holding_period","price","points","mins_played"]  ],
+                                        data=[],
+                                        selected_columns=[],
+                                                                      editable=True,
+                                        style_cell={'textAlign': 'center'},
+                                        style_data_conditional=[{
+                                            'if': {'column_id': 'Checkbox'},
+                                            'textAlign': 'center'
+                                        }],
+                                        filter_action='native', 
+                                        row_selectable='multi',
+                                        selected_rows=[],
+                                        style_table={'overflowX': 'scroll','width': '100%', 'margin': '1%'},
+                                        style_data={
+                                            'whiteSpace': 'normal',
+                                            'height': 'auto',
+                                        },
+                                        style_header={
+                                            'backgroundColor': 'rgb(230, 230, 230)',
+                                            'fontWeight': 'bold'
+                                        },
+                                        style_cell_conditional=[
+                                            {
+                                                'if': {'column_id': 'Checkbox'},
+                                                'textAlign': 'center',
+                                                'width': '10%'
+                                            } for c in ['Checkbox']
+                                        ],
+                                        page_size=10,
+                                    ),                   
+                                    ] ,  style={'width': '90%', "top": "120%","position":"absolute", "margin":"auto","padding-left":"3%"}),])
+
                     ], style={'position': 'relative'})
                 ),
                 dcc.Tab(
@@ -569,10 +605,44 @@ container = dbc.Container(
                     ]),
 
                        # html.H4(className='what-is', children='What is Manhattan Plot?'),
-                        html.Div(id="best-container",  children=[
+                        dcc.Loading( [html.Div(id="best-container",  children=[
                         html.Img(src= "assets/field.jpg", style={'height': '83%', 'width': '80%','position': 'absolute','top': f'{basepic_top_y}%', 'left': '5%'})   ], 
                        style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', "height" : "80vh"} ,
                     ),
+                      html.Div(children = [
+                        dash_table.DataTable(
+                                        id='table_select-3',
+                                        columns=[{'name': i, 'id': i} for i in df_table.columns if i in  ["id","player_name","team","position","holding_period","price","points","mins_played"]  ],
+                                        data=[],
+                                        selected_columns=[],
+                                        style_cell={'textAlign': 'center'},
+                                        style_data_conditional=[{
+                                            'if': {'column_id': 'Checkbox'},
+                                            'textAlign': 'center'
+                                        }],
+                                        filter_action='native', 
+                                        row_selectable='multi',
+                                                                      editable=True,
+                                        selected_rows=[],
+                                        style_table={'overflowX': 'scroll','width': '100%', 'margin': '1%'},
+                                        style_data={
+                                            'whiteSpace': 'normal',
+                                            'height': 'auto',
+                                        },
+                                        style_header={
+                                            'backgroundColor': 'rgb(230, 230, 230)',
+                                            'fontWeight': 'bold'
+                                        },
+                                        style_cell_conditional=[
+                                            {
+                                                'if': {'column_id': 'Checkbox'},
+                                                'textAlign': 'center',
+                                                'width': '10%'
+                                            } for c in ['Checkbox']
+                                        ],
+                                        page_size=10,
+                                    ),                   
+                                    ] ,  style={'width': '90%', "top": "120%","position":"absolute", "margin":"auto","padding-left":"3%"}),])
                         # html.Div([html.P('ManhattanPlot allows you to visualize genome-'
                         #        'wide association studies (GWAS) efficiently. '
                         #        'Using WebGL under the hood, you can interactively '
@@ -639,14 +709,14 @@ container = dbc.Container(
                     className= "six columns" , style={"box-shadow": "1rem 1rem 2rem rgba(0,0,0,0.35)" , "padding": "10px" ,"margin": "10px" }
                 ),
                 dbc.Col(
-                    [html.H1("Options"), 
+                    [html.H2("Options"), 
                      html.P("Your Are Viewing Data For :"), 
                      dcc.Dropdown(['Gameweek 1', 'Gameweek 2', 'Gameweek 3', 'Gameweek 4', 'Gameweek 5', 'Gameweek 6', 'Gameweek 7', 'Gameweek 8','Gameweek 9','Gameweek 10',
                                    'Gameweek 11', 'Gameweek 12', 'Gameweek 13', 'Gameweek 14', 'Gameweek 15', 'Gameweek 16', 'Gameweek 17', 'Gameweek 18','Gameweek 19','Gameweek 20',
                                    'Gameweek 21', 'Gameweek 22', 'Gameweek 23', 'Gameweek 24', 'Gameweek 25', 'Gameweek 26', 'Gameweek 27', 'Gameweek 28','Gameweek 29','Gameweek 30',
                                    'Gameweek 31', 'Gameweek 32', 'Gameweek 33', 'Gameweek 34', 'Gameweek 35', 'Gameweek 36', 'Gameweek 37', 'Gameweek 38'                                   
                                    ], 'Gameweek 1', id='gw-dropdown'),
-                     html.P("It takes up 3 columns."), html.P("It has the same height as the main container."),
+                     html.H3("Optimizers :"), html.P("There are two Optimizers Used in This Case. (i) A Forward Looking and (ii) Backward Looking. Click Show Comparisons to Show the Differences"),
                      html.Button('Show Comparisons', id='change-style-button', n_clicks=0),        
                     dmc.MultiSelect(
                         label="Pick Your Forwards",
@@ -707,6 +777,8 @@ app.layout = html.Div([header, container])
 
 @app.callback(Output('rand-container', 'children'),
               Output("opt-container","children"), Output("best-container","children"),
+                Output('table_select-2', 'data'),
+                Output('table_select-3', 'data'),
                 Output("pta1","children"),
                 Output("ptb1","children"),
                 Output("ptc1","children"),
@@ -851,10 +923,12 @@ def update_image(n_clicks, gameweek):
         # ),
 
     if n_clicks%2 == 0:
-        return [basepic ] ,[basepic ] ,[basepic ],"", "", "","","","","", "", "","","","","", "", "","","","",
+        return [basepic ] ,[basepic ] ,[basepic ],"","","", "", "","","","","", "", "","","","","", "", "","","","",
    # encoded_image = base64.b64encode(open('image.png', 'rb').read())
     else :
-        return  df_tab_final_1, df_tab_final_2 , df_tab_final_3, \
+        return  df_tab_final_1, df_tab_final_2 , df_tab_final_3,  df_tab_2[df_tab_2["round"] == week_id].rename(columns={"identifier" : "id","player_position":"position","player_minutes_played":"mins_played","player_total_point_obtained":"points", "player_costs" :"price"
+                     }).to_dict('records'),  df_tab_3[df_tab_3["round"] == week_id].rename(columns={"identifier" : "id","player_position":"position","player_minutes_played":"mins_played","player_total_point_obtained":"points", "player_costs" :"price"
+                     }).to_dict('records'), \
             total_score_1,  total_score_1, total_score_1, \
             total_cost_1, total_cost_1, total_cost_1, \
             total_score_2,  total_score_2, total_score_2, \
